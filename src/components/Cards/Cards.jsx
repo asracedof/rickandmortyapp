@@ -1,8 +1,9 @@
-import Card from './Card';
+import Card from '../Card/Card';
+import cardsStyles from "./Cards.module.css";
 
 export default function Cards({ characters, onClose }) {
    return (
-   <div>
+   <div className={cardsStyles.cardsContainer}>
       {
          characters.map(({id, name, status, species, gender, origin, image})=>{
             return (
@@ -21,5 +22,6 @@ export default function Cards({ characters, onClose }) {
             )
          })
       }
-   </div>);
+   </div>
+   );
 }

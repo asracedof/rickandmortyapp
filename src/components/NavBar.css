@@ -1,5 +1,10 @@
 .nav{
-    border:  solid rgb(245, 242, 242);
-    padding: 10px;
-    background-color: black;
+   background-color:#142d4c;
+   padding: 0.5em;
+   display: flex;
+   flex-direction: row;
+   justify-content:space-around;
+   margin-bottom: 1em;
+   
+
 }

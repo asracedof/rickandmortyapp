@@ -1,0 +1,41 @@
+.container{
+    background-color:#455d7a;
+    width: 300px;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,1);
+    display: flex;
+    flex-direction:column;
+}
+
+.closeButton{
+    border:0px;
+    background-color: rgb(236, 30, 30);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    transition: 0.5s;
+    color: white;
+}
+
+.closeButton:hover{
+    box-shadow: 10px 10px 5px 0 px rgba(0,0,0,0.75);
+}
+
+.infoContainer{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title{
+position: absolute;
+top: -50%;
+font-size: 1rem;
+left: 0%;
+background-color: yellow;
+padding: 0.2rem 0.5rem;
+border: 1px solid black;
+}

@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
 import './App.css';
 import axios from "axios";
-import Cards from './components/Cards.jsx';
-import NavBar from './components/NavBar';
-
+import Cards from './components/Cards/Cards.jsx';
+import NavBar from './components/NavBar.jsx';
+import {Routes, Route} from "react-router-dom";
+import About from './Pages/About/About';
+import Detail from './Pages/Detail/Detail';
+import Login from './Pages/Login/Login';
+import Error from './Pages/Error/Error';
 
 function App() {
    const [characters, setCharacters] = useState([])
@@ -19,7 +23,7 @@ function App() {
             }
          } else {
             alert('¡No hay personajes con este ID!');
-         }
+         } 
       });
    }
 
@@ -28,15 +32,21 @@ function App() {
          return oldChars.filter((ch)=> ch.id !==id)
       });
    }
+
    return (
       <div className='App'>
-         <header>
          <NavBar onSearch={onSearch} />
-          </header>
-          <h1>Rick and Morty APP </h1>  
-          <Cards onClose={onClose} characters={characters} />
-         </div>
+         <h1>Rick and Morty APP </h1>
+         <Routes>
+            <Route path='/' element={<Login />}></Route>
+            <Route path='/about' element={<About />}></Route>
+            <Route path='/detail/:id' element={<Detail/>}></Route>
+            <Route path='/home' element={<Cards onClose={onClose} characters={characters} />}></Route>
+            <Route path='*' element={<Error />}></Route>
+         </Routes>
+      </div>
    );
 }
 
 export default App;
+
