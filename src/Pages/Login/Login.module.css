@@ -1,8 +1,69 @@
-.container{
-    min-height: 90vh;
-    background-color: blue;
+/* .container{
+    min-height: 88.5vh;
     background-image: url("../../assets/img/bgLogin.jpg");
     background-size:cover;
     background-repeat:no-repeat;
-    background-attachment: fixed;
-}
+    background-attachment:fixed;
+    
+} */
+@font-face {
+    font-family: 'Bungee';
+    src: url('../../assets/Font/Bungee/bungeespice-regular-webfont.woff2') format('woff2'),
+         url('../../assets/Font/Bungee/bungeespice-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.title{
+    font-family: 'Bungee';
+  }
+.container {
+    min-height: 88.5vh;
+    background-color: #141414;
+    background-image: url("../../assets/img/bgLogin.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    color: #095706;
+    font-size:4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: -1px -1px 0 #0a0a0a, 1px -1px 0 #080808, -1px 1px 0 #070707, 1px 1px 0 #050505, 0 0 6px #066837;
+  }
+  
+  .label {
+    color: #1120ec;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: -1px -1px 0 #0a0a0a, 1px -1px 0 #080808, -1px 1px 0 #070707, 1px 1px 0 #050505, 0 0 6px #081061;
+  }
+  
+  .input {
+    width: 25%;
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border:#2ef306;
+    margin-bottom: 2rem;
+  }
+  
+  .button {
+    background-color: #1120ec;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #081061;
+  }

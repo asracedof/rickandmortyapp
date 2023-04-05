@@ -36,8 +36,7 @@ function App() {
    return (
       <div className='App'>
          <NavBar onSearch={onSearch} />
-         <h1>Rick and Morty APP </h1>
-         <Routes>
+            <Routes>
             <Route path='/' element={<Login />}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/detail/:id' element={<Detail/>}></Route>
