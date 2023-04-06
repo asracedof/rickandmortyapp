@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Rick and Morty App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta aplicación web utiliza React y la API de Rick and Morty para mostrar información de los personajes y permitir al usuario agregarlos o eliminarlos de una lista personalizada.
 
-## Available Scripts
+#####
+# Instalación
 
-In the project directory, you can run:
+Para instalar la aplicación, sigue estos pasos:
 
-### `npm start`
+1. Clona el repositorio en tu computadora:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    ### `git clone url`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Accede a la carpeta del proyecto:
 
-### `npm test`
+    ### `cd nombreCarpeta`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Instala las dependencias del proyecto con npm:
 
-### `npm run build`
+    ### `npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Inicia la aplicación en modo de desarrollo:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ### `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Esto abrirá la aplicación en tu navegador en la dirección <http://localhost:3000>.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Uso
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+La aplicación tiene las siguientes páginas:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Login: página de inicio de sesión para ingresar a la aplicación.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Home: página principal donde se muestran los personajes agregados por el usuario y se pueden agregar más personajes utilizando la barra de búsqueda.
 
-## Learn More
+* About: página con información sobre la aplicación y los desarrolladores.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Detail: página con información detallada de un personaje específico seleccionado por el usuario.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Error: página de error para rutas no encontradas.
 
-### Code Splitting
+En la página de Home, el usuario puede buscar personajes ingresando su ID en la barra de búsqueda. Si el personaje se encuentra en la API de Rick and Morty, se agregará a la lista de personajes del usuario. Si ya existe en la lista, se mostrará un mensaje de alerta. Si no se encuentra en la API, se mostrará un mensaje de alerta indicando que no existe en ese universo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+En la lista de personajes, el usuario puede eliminar un personaje haciendo clic en el botón de cerrar.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Créditos
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esta aplicación fue desarrollada como proyecto del M2 para el curso de React de Henry por Arlet Racedo. Utiliza la API de Rick and Morty.
