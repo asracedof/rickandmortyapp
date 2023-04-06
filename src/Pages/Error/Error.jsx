@@ -1,7 +1,7 @@
 import React from 'react';
 import './Error.css';
 
-function Error() {
+export default function Error() {
   return (
     <div className='error-container'>
       <img src='https://rickandmortyapi.com/api/character/avatar/19.jpeg' alt='Rick Sanchez' />
@@ -11,6 +11,5 @@ function Error() {
   );
 }
 
-export default Error;
 
 

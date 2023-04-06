@@ -1,0 +1,49 @@
+/* background-image: url("../../assets/img/bgLogin.jpg"); */
+
+.about-container {
+  min-height: 90vh;
+  background-color: #141414;
+  background-image: url("../../assets/img/1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  
+}
+@font-face {
+    font-family: 'Bungee Spice';
+    src: url('../../assets/Font/Bungee/bungeespice-regular-webfont.woff2') format('woff2'),
+         url('../../assets/Font/Bungee/bungeespice-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.about-title, .about-text {
+    font-family: 'Bungee Spice';
+  }
+
+  .about-title {
+    font-size:3rem;
+    margin-bottom: 2rem;
+    margin-left: 170px;
+    margin-top: 200px;
+    text-align: center;
+    color: #FFC300;
+    text-shadow: 3px 3px 0px #000000, 5px 5px 0px #FF5733, 7px 7px 0px #00FFB4, 9px 9px 0px #FFC300;
+ }
+  
+
+  .about-text {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    margin-left: 55px;
+    margin-top: 0px;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.5;
+    color: #FFC300;
+    text-shadow: -1px -1px 0px #2C5234, 1px -1px 0px #4C4C4C, -1px 1px 0px #2C5234, 1px 1px 0px #4C4C4C, 0 0 6px #2C5234;
+  }
+  
