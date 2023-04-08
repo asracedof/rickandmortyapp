@@ -2,7 +2,8 @@
 
 Esta aplicación web utiliza React y la API de Rick and Morty para mostrar información de los personajes y permitir al usuario agregarlos o eliminarlos de una lista personalizada.
 
-#####
+####
+
 # Instalación
 
 Para instalar la aplicación, sigue estos pasos:
@@ -47,4 +48,4 @@ En la lista de personajes, el usuario puede eliminar un personaje haciendo clic 
 
 # Créditos
 
-Esta aplicación fue desarrollada como proyecto del M2 para el curso de React de Henry por Arlet Racedo. Utiliza la API de Rick and Morty.
+Esta aplicación fue desarrollada como proyecto para el M2 del curso de React de Henry por Arlet Racedo. Utiliza la API de Rick and Morty.

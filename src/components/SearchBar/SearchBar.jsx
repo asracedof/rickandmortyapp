@@ -12,8 +12,8 @@ export default function SearchBar({onSearch}) {
 
    return (
       <div className={style.bar}>
-         <input onChange={handleCahnge} type='search' classname={style.searchInput} name="search" value={id} />
-         <button classname={style.searchButton} onClick={()=>onSearch(id)}>Agregar</button>
+         <input onChange={handleCahnge} type='search' className={style.searchInput} name="search" value={id} />
+         <button className={style.searchButton} onClick={()=>onSearch(id)}>Agregar</button>
       </div>
    );
 }
