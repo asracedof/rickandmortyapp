@@ -31,7 +31,6 @@ function App() {
         navigate('/');
    }
    
-
    useEffect(() => {
       !access && navigate('/');
    }, [access,navigate]);
@@ -39,7 +38,7 @@ function App() {
    const [characters, setCharacters] = useState([]);
    
    function AddRandomCharacter() {
-      const randomId = Math.floor(Math.random() * 100) + 1;
+      const randomId = Math.floor(Math.random() * 826);
   
        axios(`${URL_BASE}/${randomId}?key=${API_KEY}`).then(({ data }) => {
          if (data.name) {
