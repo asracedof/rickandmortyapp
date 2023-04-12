@@ -21,16 +21,18 @@ export default function Detail() {
   }, [id]);
 
   return (
-    <div className="card-container">
-    <img className="detailImage" src={character.image} alt={character.name}/>
-    <div className="infoContainer">
-      <h2 className="card-name">{character.name}</h2>
-      <div className="card-info-container">
-        <span className="card-info">Status: {character.status}</span>
-        <span className="card-info">Species: {character.species}</span>
-        <span className="card-info">Gender: {character.gender}</span>
-        <span className="card-info">Origin: {character.origin?.name}</span>
-      </div>
+    <div className='detail-container'> 
+      <img className="detailImage" src={character.image} alt={character.name}/>
+      <div className="card-container">
+        <div className="infoContainer">
+          <h2 className="card-name">{character.name}</h2>
+          <div className="card-info-container">
+            <span className="card-info">Status: {character.status}</span>
+            <span className="card-info">Species: {character.species}</span>
+            <span className="card-info">Gender: {character.gender}</span>
+            <span className="card-info">Origin: {character.origin?.name}</span>
+          </div>
+        </div>
     </div>
   </div>
   )

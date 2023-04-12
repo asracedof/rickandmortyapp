@@ -1,5 +1,5 @@
 .container{
-    background-color:#455d7a;
+    background-color:#5085c7;
     width: 300px;
     padding: 1em;
     border-radius: 10px;
@@ -8,34 +8,80 @@
     flex-direction:column;
 }
 
-.closeButton{
-    border:0px;
-    background-color: rgb(236, 30, 30);
-    width: fit-content;
-    height: fit-content;
-    border-radius: 10px;
-    transition: 0.5s;
-    color: white;
+.buttons{
+    padding: 7px 10px; 
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-.closeButton:hover{
-    box-shadow: 10px 10px 5px 0 px rgba(0,0,0,0.75);
+.favButton {
+    background-color: #FFD700;
+    color: black; 
+    padding: 7px 10px; 
+    margin-bottom: 1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: 0.3s ease-in-out;
 }
+  
+.favButton:hover {
+    box-shadow: 10px 10px 5px 0 px rgba(0,0,0,0.75);
+    background-color: #FF8080; 
+}
+  
+
+.closeButton {
+    background-color: #FFD700; /* Color de fondo */
+    color: black;
+    padding: 7px 10px; 
+    margin-bottom: 1px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: 0.3s ease-in-out;
+}
+  
+.closeButton:hover {
+    box-shadow: 10px 10px 5px 0 px rgba(0,0,0,0.75);
+    background-color: #FF8080; 
+}
+
 
 .infoContainer{
     display: flex;
     position: relative;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1rem;
+    justify-content: space-around;
+    
+}
+
+.infoCard{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items:  center;
+    gap: 1rem;
+      
+}
+.infoCard span {
+    font-weight: bold; 
+    color:#0a0a0a;
+   
+    
 }
 
 .title{
 position: absolute;
-top: -50%;
+top: -300%;
 font-size: 1rem;
 left: 0%;
-background-color: yellow;
+background-color: #FFD700;
 padding: 0.2rem 0.5rem;
 border: 1px solid black;
 }

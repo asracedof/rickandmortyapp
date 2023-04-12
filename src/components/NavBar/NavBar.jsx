@@ -12,6 +12,9 @@ export default function NavBar({onSearch, logout, AddRandomCharacter}) {
         <Link to="/about"> 
         <button>About</button>
         </Link>
+        <Link to="/favorites"> 
+        <button>Favorites</button>
+        </Link>
         <SearchBar onSearch={onSearch} /> 
         <button onClick={AddRandomCharacter}>Random</button>
         <button onClick={logout}>Sign Out</button>

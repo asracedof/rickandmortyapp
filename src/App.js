@@ -8,6 +8,7 @@ import About from './Pages/About/About';
 import Detail from './Pages/Detail/Detail';
 import Login from './Pages/Form/Login';
 import Error from './Pages/Error/Error';
+import Favorites from './components/Favorites/Favorites';
 
 const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
 const API_KEY = "5ddc052ed9b8.fedf3a772f7edb9b0e76";
@@ -85,6 +86,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Login login={login}/>} />
         <Route path='/about' element={<About />} />
+        <Route path='/favorites' element={<Favorites onClose={onClose} />} />
         <Route path='/detail/:id' element={<Detail />} />
         <Route path='/home' element={<Cards onClose={onClose} characters={characters} />}
         />
