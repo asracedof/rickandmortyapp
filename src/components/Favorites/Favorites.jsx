@@ -1,6 +1,7 @@
 import Card from "../Card/Card";
 import { connect } from 'react-redux'
 import { removeFav } from "../../redux/actions";
+import './Favorites.css';
 
 const Favorites = ({ myFavorites, removeFav, onClose}) => {
   function closeFav(id){
@@ -8,7 +9,7 @@ const Favorites = ({ myFavorites, removeFav, onClose}) => {
     removeFav(id)
   }
     return (
-        <div>
+        <div className="container" >
             {
                 myFavorites?.map(fav => {
                     return (
