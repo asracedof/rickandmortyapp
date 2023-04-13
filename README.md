@@ -48,4 +48,4 @@ En la lista de personajes, el usuario puede eliminar un personaje haciendo clic 
 
 # Créditos
 
-Esta aplicación fue desarrollada como proyecto para el M2 del curso de React de Henry por Arlet Racedo. Utiliza la API de Rick and Morty.
+Esta aplicación fue desarrollada como proyecto del M2 React y Redux de Henry por Arlet Racedo. Utiliza la API de Rick and Morty.
