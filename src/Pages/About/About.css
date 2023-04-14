@@ -1,7 +1,7 @@
 /* background-image: url("../../assets/img/bgLogin.jpg"); */
 
 .about-container {
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: #141414;
   background-image: url("../../assets/img/1.jpg");
   background-size: cover;
@@ -27,7 +27,7 @@
     font-size:3rem;
     margin-bottom: 2rem;
     margin-left: 170px;
-    margin-top: 200px;
+    margin-top: 250px;
     text-align: center;
     color: #FFC300;
     text-shadow: 3px 3px 0px #000000, 5px 5px 0px #FF5733, 7px 7px 0px #00FFB4, 9px 9px 0px #FFC300;

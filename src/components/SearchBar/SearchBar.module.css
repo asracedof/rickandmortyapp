@@ -1,8 +1,17 @@
 .searchInput{
-    border: 0px;
-    border-radius: 15px 0px 0px 15px;
+    display: inline-block;
+	background-color: #fff;
+	color: #313131;
+	padding: 0.4rem 2rem;
+	border-radius: 2rem;
+	transition: background-color 0.25s;
 }
 
-.searchBotton{
-    border: 0px;
+.searchButton{
+    display: inline-block;
+	background-color: #fff;
+	color: #313131;
+	padding: 0.4rem 2rem;
+	border-radius: 2rem;
+	transition: background-color 0.25s;
 }

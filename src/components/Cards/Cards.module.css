@@ -2,10 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-flex-direction: row;
-justify-content:space-evenly;
-width: 90%;
-margin: auto;
-padding: 2em;
-border-radius: 15px;
+    flex-direction: row;
+    justify-content:space-evenly;
+    padding: 6em;
+    border-radius: 15px;
 }

@@ -1,15 +1,18 @@
-import { ADD_FAV, REMOVE_FAV } from "./actions-types";
+import { ADD_FAV, REMOVE_FAV,FILTER, ORDER } from "./actions-types"; //! agregue FILTER
 const initialState = {
     data:[],
-    myFavorites:[]
+    myFavorites:[],
+    allCharactersFav:[] //! agregue
 }
 
 export default function rootReducer(state=initialState,{type,payload}){
     switch (type) {
+
         case ADD_FAV:
             return{
                 ...state,
-                myFavorites: [...state.myFavorites,payload]
+                myFavorites: [...state.allCharactersFav,payload], //! modifique
+                allCharactersFav: [...state.allCharactersFav,payload] //!agregue
             };
 
         case REMOVE_FAV:
@@ -18,10 +21,23 @@ export default function rootReducer(state=initialState,{type,payload}){
                 ...state,
                 myFavorites: newFav,
             };
+
+        case FILTER: //! agregue case completo
+            const allCharactersFiltered = state.allCharactersFav.filter((ch)=>ch.gender === payload)
+            return{
+                ...state,
+                myFavorites: payload === "AllCharacters" ? [...state.allCharactersFav] : allCharactersFiltered
+            };
+        
+        case ORDER: //! agregue case completo
+        const allCharactersFavCopy = [...state.allCharactersFav]
+        return {
+            ...state,
+            myFavorites: payload === "A" ? allCharactersFavCopy.sort((a,b)=> a.id - b.id) : allCharactersFavCopy.sort((a,b)=> b.id - a.id)
+        };
     
         default:
-            return state;
+            return {...state}; //! lo tenia asi {state}
     }
-    
     
 }

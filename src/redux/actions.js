@@ -1,4 +1,4 @@
-import { ADD_FAV, REMOVE_FAV } from "./actions-types";
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./actions-types"; //! agregue FILTER , ORDER
 
 export function addFav(character){
     return {
@@ -12,4 +12,12 @@ export function removeFav(id){
         type: REMOVE_FAV,
         payload: id,
     };
+}
+
+export const filterCards=(gender) =>{ //! agregue
+    return { type:FILTER, payload: gender}
+}
+
+export const orderCards=(order) =>{ //! agregue
+    return { type:ORDER, payload: order}
 }
