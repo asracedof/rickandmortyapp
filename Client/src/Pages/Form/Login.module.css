@@ -1,0 +1,123 @@
+
+@font-face {
+  font-family: 'Bungee Spice';
+  src: url('../../assets/Font/Bungee/bungeespice-regular-webfont.woff2') format('woff2'),
+       url('../../assets/Font/Bungee/bungeespice-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title, .label, .button, .email {
+  font-family: 'Bungee Spice';
+}
+.container {
+  height: 100%;
+  min-height: 100vh;
+  /* background-color: #141414; */
+  /* background-image: url("../../assets/img/625910.png"); */
+  background-image: url("../../assets/img/5dd1c7902e40ff00232f384a.gif");
+  background-size:60%;
+  background-color: rgba(103, 43, 143, 0.4);;
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-position:right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin: 0; /* Changed margin-block to margin to support more browser compatibility */
+  color: #0b7508;
+  font-size: 3rem;
+  position: absolute;
+  top: 3rem;
+  left: 1rem;
+  text-align: center;
+  text-shadow: -1px -1px 0 #0a0a0a, 1px -1px 0 #080808, -1px 1px 0 #070707, 1px 1px 0 #050505, 0 0 20px #066837;
+}
+
+/* .email {
+  font-size: 2rem;  
+  color: #FFC300;
+  position: absolute;
+  top: 12rem;
+  left: 1rem;
+  text-shadow: -1px -1px 0px #2C5234, 1px -1px 0px #4C4C4C, -1px 1px 0px #2C5234, 1px 1px 0px #4C4C4C, 0 0 6px #2C5234;
+}
+.label {
+  font-size: 2rem;  
+  color: #FFC300;
+  position: absolute;
+  top: 18rem;
+  left: 1rem;
+  text-shadow: -1px -1px 0px #2C5234, 1px -1px 0px #4C4C4C, -1px 1px 0px #2C5234, 1px 1px 0px #4C4C4C, 0 0 6px #2C5234;
+} */
+.inputEmail{
+  position: absolute;
+  top: 10rem;
+  left: 3rem;
+  width: 30%;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #2ef306; /* Added a border style */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.input{
+  position: absolute;
+  top: 13rem;
+  left: 3rem;
+  width: 30%;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #2ef306; /* Added a border style */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+.input[type="password"] {
+  margin-top: 1rem;
+}
+
+.button {
+  position: absolute;
+  top: 18rem;
+  left: 5.7rem;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: #FFC300;
+  text-shadow: -1px -1px 0px #2C5234, 1px -1px 0px #4C4C4C, -1px 1px 0px #2C5234, 1px 1px 0px #4C4C4C, 0 0 6px #2C5234;
+  background-color: #0e74db;
+  padding: 0.4rem 1.5rem;
+  border: 1px solid #111111;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px 0px rgb(10, 10, 10);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #081061;
+}
+.made{
+  position: absolute;
+  top: 34rem;
+  text-align: center;
+
+}
+.link:link,
+.link:visited {
+  color: green;
+}
+.link:hover,
+.link:active {
+  color: cyan;
+}
+
+
