@@ -33,12 +33,12 @@ const Favorites = ({ myFavorites, removeFav, onClose}) => {
     </select>
 
     <select  onChange={handleFilter}>
+        <option value="AllCharacters">AllCharacters</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="Genderless">Genderless</option>
         <option value="unknown">Unknown</option>
-        <option value="AllCharacters">AllCharacters</option>
-        
+       
         </select>
         </div>
         <div className="favs" >

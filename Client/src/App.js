@@ -1,43 +1,42 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import { Routes, Route, useLocation, useNavigate, } from "react-router-dom";
 import axios from "axios";
 import Cards from './components/Cards/Cards.jsx';
 import NavBar from './components/NavBar/NavBar.jsx';
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import About from './Pages/About/About';
 import Detail from './Pages/Detail/Detail';
-import Login from './Pages/Form/Login';
+import Form from './Pages/Form/Login';
 import Error from './Pages/Error/Error';
 import Favorites from './components/Favorites/Favorites';
-
-// const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
-// const API_KEY = "5ddc052ed9b8.fedf3a772f7edb9b0e76";
-
+import './App.css';
+const URL = 'http://localhost:3001/rickandmorty/login/';
 function App() {
-
+  const location = useLocation();
    const navigate = useNavigate();
    const [access, setAccess] = useState(false);
-   const EMAIL = 'ejemplo@gmail.com';
-   const PASSWORD = 'unaPass1';
+   const [characters, setCharacters] = useState([]);
 
-   function login(inputs) {
-    if (inputs.password === PASSWORD && inputs.email === EMAIL) {
-      setAccess(true);
-      navigate('/home');
-    }
-   }
+   const login = async (userData) => {
+    try {
+       const { email, password } = userData;
+       const { data } = await axios(URL + `?email=${email}&password=${password}`)
+       const { access } = data;
+       setAccess(access);
+       access && navigate('/home');
+  
+      } catch (error) {
+        console.log(error.message);
+     }
+  }
+   useEffect(() => {
+   !access && navigate('/')}, [access])
 
    function logout() {
         setAccess(false);
         navigate('/');
    }
    
-   useEffect(() => {
-      !access && navigate('/');
-   }, [access,navigate]);
-
-   const [characters, setCharacters] = useState([]);
-   
+     
    function AddRandomCharacter() {
       const randomId = Math.floor(Math.random() * 40);
   
@@ -56,8 +55,9 @@ function App() {
     }
 
 
-  function onSearch(id) {
-    axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
+  const onSearch = async (id) => {
+    try {
+      const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
       if (data.name) {
         let exist = characters.find((ch) => ch.id === data.id);
         if (exist) {
@@ -65,10 +65,10 @@ function App() {
         } else {
           setCharacters((oldChars) => [...oldChars, data]);
         }
-      } else {
+      }
+    } catch (error){
         alert('¡That character is not in this universe.Try again!');
       }
-    });
   }
 
   function onClose(id) {
@@ -76,15 +76,15 @@ function App() {
       return oldChars.filter((ch) => ch.id !== id);
     });
   }
-
-  const location = useLocation();
+  
+  
+  
   const isLoginPage = location.pathname === '/';
-
   return (
     <div className='App'>
       {!isLoginPage && <NavBar logout={logout} onSearch={onSearch} AddRandomCharacter={AddRandomCharacter} />}
       <Routes>
-        <Route path='/' element={<Login login={login}/>} />
+        <Route path='/' element={<Form login={login}/>}/>
         <Route path='/about' element={<About />} />
         <Route path='/favorites' element={<Favorites onClose={onClose} />} />
         <Route path='/detail/:id' element={<Detail />} />
