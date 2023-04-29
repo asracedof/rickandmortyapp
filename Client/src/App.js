@@ -9,6 +9,7 @@ import Form from './Pages/Form/Login';
 import Error from './Pages/Error/Error';
 import Favorites from './components/Favorites/Favorites';
 import './App.css';
+
 const URL = 'http://localhost:3001/rickandmorty/login/';
 function App() {
   const location = useLocation();

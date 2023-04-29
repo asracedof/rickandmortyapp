@@ -1,45 +1,61 @@
 import Card from "../Card/Card";
-import { connect, useDispatch } from 'react-redux'
-import { filterCards, removeFav , orderCards} from "../../redux/actions";
+import { connect, useDispatch} from 'react-redux'
+import { filterFavCards,  resetFilters, removeFav , orderFavCards} from "../../redux/actions";
 import { useState } from "react";
 import './Favorites.css';
 
 const Favorites = ({ myFavorites, removeFav, onClose}) => {
-
-  function closeFav(id){
-    onClose(id)
-    removeFav(id)
-  }
-
-  const dispatch = useDispatch(); 
-  const [aux, setAux]=useState(false);
+    
+    function closeFav(id){
+        onClose(id)
+        removeFav(id)
+    }
+    
+    const dispatch = useDispatch(); 
+  
+    const [orderSelect, setOrderSelect] = useState(false)
+    const [filterSelect, setFilterSelect] = useState(false)
 
   const handleOrder = (event) => {
-    dispatch(orderCards(event.target.value));
-    setAux(true);
+     event.preventDefault();
+     const {value} = event.target;
+     setOrderSelect(value);
+     dispatch(orderFavCards(value));
   }
 
     const handleFilter = (event) => {
-        dispatch(filterCards(event.target.value));
+        event.preventDefault();
+        const {value} = event.target;
+        setFilterSelect(value)
+        dispatch(filterFavCards(value));
+    }
+    const handleResetFilters= (event) => {
+        dispatch(resetFilters());
+        setFilterSelect("AllCharacters");
+        setOrderSelect("DEFAULT");
     }
 
     return (
 
   <div className="containerFavs">
     <div className="rowFilter">
-    <select  onChange={handleOrder}>
-        <option value="A">Ascending</option>
-        <option value="B">Descending</option>
+    <select onChange={handleOrder} name="order" value={orderSelect}>
+    <option value="DEFAULT" disabled>
+            Select Order
+          </option>
+        <option value="ASC">Ascending</option>
+        <option value="DESC">Descending</option>
     </select>
 
-    <select  onChange={handleFilter}>
+    <select  onChange={handleFilter} name="filter" value={filterSelect}>
+        <option value="DEFAULT" disabled>Select Filter</option>
         <option value="AllCharacters">AllCharacters</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="Genderless">Genderless</option>
-        <option value="unknown">Unknown</option>
-       
-        </select>
+        <option value="unknown">Unknown</option> 
+    </select>
+    <button className="reset" onClick={handleResetFilters}>Reset Filters</button>
         </div>
         <div className="favs" >
             {
@@ -58,6 +74,7 @@ const Favorites = ({ myFavorites, removeFav, onClose}) => {
                     )
                 })
             }
+            {myFavorites.length === 0 && <h2 className="notFound">No favorites yet in this multiverse</h2>}
         </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import { ADD_FAV, REMOVE_FAV,FILTER, ORDER } from "./actions-types"; //! agregue FILTER
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, RESET_FILTERS, SHOW_NOTIFICATION } from "./actions-types"; //! agregue FILTER
 const initialState = {
     myFavorites:[],
     allCharactersFav:[] //! agregue
@@ -11,7 +11,7 @@ const reducer = (state = initialState, { type, payload }) => {
             return { 
                 ...state, 
                 myFavorites: payload, 
-                allCharacters: payload };
+                allCharactersFav: payload };
         
 
         case REMOVE_FAV:
@@ -26,20 +26,32 @@ const reducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 myFavorites: 
-                    payload === 'allCharacters'
+                    payload === 'AllCharacters'
                     ? [...state.allCharactersFav]
                     : allCharactersFiltered
             }
         
         case ORDER: //! agregue case completo
-        const allCharactersFavCopy = [...state.allCharactersFav]
-        return {
+        const allCharactersFavCopy = [...state.myFavorites]
+        const newOrder = allCharactersFavCopy .sort((a, b) => {
+            if (a.id > b.id) {
+              return "ASC" === payload ? 1 : -1;
+            }
+            if (a.id < b.id) {
+              return "DESC" === payload ? 1 : -1;
+            }
+            return 0;
+          });
+          return {
             ...state,
-            myFavorites:
-                payload === 'A'
-                ? allCharactersFavCopy.sort((a, b) => a.id - b.id)
-                : allCharactersFavCopy.sort((a, b) => b.id - a.id)
-        }
+            myFavorites: newOrder,
+          };
+        
+        case RESET_FILTERS:
+        return {
+          ...state,
+          myFavorites: [...state.allCharactersFav],
+        };
     
         default:
             return {...state}; //! lo tenia asi {state}
