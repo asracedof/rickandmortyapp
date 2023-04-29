@@ -5,6 +5,7 @@ const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 const regexPassword = /^(?=.*\d)[\w@-]{6,10}$/;
 
 export default function Login({login}) {
+  
   const [inputs, setInputs]= useState({
     email:"",
     password:""
