@@ -29,7 +29,7 @@
 
 .title {
   margin: 0; /* Changed margin-block to margin to support more browser compatibility */
-  color: #0b7508;
+  color:var(--dark-green);
   font-size: 3rem;
   position: absolute;
   top: 3rem;

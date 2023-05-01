@@ -1,55 +1,61 @@
-.container{
-    background-color:#5085c7;
-    width: 300px;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px 0px rgba(0,0,0,1);
-    display: flex;
-    flex-direction:column;
+.containerCard{
+    min-height: 350px;
+    max-width: 308px;
+    margin: 15px;
+    border-radius: 12px;
+    background: linear-gradient(
+      0deg,
+      var(--purple-dark) 0%,
+      var(--purple-light) 100%
+    );
+    border: 4px solid var(--purple-dark);
+    box-shadow: 0 0 10px 5px var(--purple-dark);
+    transition: 50ms;
+    flex: 1 0 auto;
+}
+
+.cardContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 3px var(--green);
 }
 
 .buttons{
     padding: 7px 10px; 
-    margin-bottom: 2px;
     display: flex;
     flex-direction: row;
+    /* align-items: center; */
     justify-content: flex-end;
 }
 
 .favButton {
-    background-color: #FFD700;
-    color: black; 
-    padding: 7px 10px; 
-    margin-bottom: 1px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; 
-    transition: 0.3s ease-in-out;
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 300ms;
 }
   
 .favButton:hover {
-    box-shadow: 10px 10px 5px 0 px rgba(0,0,0,0.75);
-    background-color: #FF8080; 
+    transform: scale(1.2);
 }
   
-
 .closeButton {
-    background-color: #FFD700; /* Color de fondo */
-    color: black;
-    padding: 7px 10px; 
-    margin-bottom: 1px;
-    margin-left: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; 
-    transition: 0.3s ease-in-out;
+  background-color: transparent;
+  color: black;
+  font-size: 22px;
+  font-weight: bold; 
+  width: 1.75em;
+  border-radius: 12px;
+  border: transparent;
+  cursor: pointer;
+  transition: 300ms;
 }
   
 .closeButton:hover {
-    box-shadow: 10px 10px 5px 0 px rgba(0,0,0,0.75);
-    background-color: #FF8080; 
-}
+    transform: scale(1.2);
+    
 
+}
 
 .infoContainer{
     display: flex;
@@ -69,19 +75,22 @@
     gap: 1rem;
       
 }
+
 .infoCard span {
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold; 
-    color:#0a0a0a;
-   
+    color:var(--ligth-blue);
     
 }
-
+.isFav {
+    color: var(--green);
+  }
 .title{
 position: absolute;
 top: -300%;
 font-size: 1rem;
 left: 0%;
-background-color: #FFD700;
+background-color:var(--green);
 padding: 0.2rem 0.5rem;
 border: 1px solid black;
 }

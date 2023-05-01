@@ -1,10 +1,18 @@
 :root {
-  --violet-light: #7d48a5;
+  /* --violet-light: #7d48a5;
   --violet-medium: #49226a;
   --violet-dark: #2e1641;
   --pink: #f86ba7;
   --green: #b3fe09;
-  --cyan: #35f5d3;
+  --cyan: #35f5d3; */
+  --purple-light: #A869C1;
+  --purple-medium: #7A3F93;
+  --purple-dark: #47215E;
+  --pink: #c93f78;
+  --green: #abdb19;
+  --dark-green: #0b7508;
+  --blue: #00C9FF;
+  --ligth-blue: rgb(202, 228, 240);
 }
 
 * {

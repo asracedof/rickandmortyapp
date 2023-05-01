@@ -1,27 +1,29 @@
 import Card from '../Card/Card';
+import { useOutletContext } from "react-router-dom";
+import CharacterControl from "./CharacterControl"
 import cardsStyles from "./Cards.module.css";
 
-export default function Cards({ characters, onClose }) {
+export default function Cards() {
+   const [ characters, onClose, onSearch, onClear]  = useOutletContext();
    return (
    <div className={cardsStyles.cardsContainer}>
-      {
-         characters.map(({id, name, status, species, gender, origin, image})=>{
-            return (
-               <Card
-               key={id}
-               id ={id}
-               name={name}
-               status={status}
-               species={species}
-               gender={gender}
-               image={image}
-               origin={origin.name}
-               onClose={onClose}
-               />
-               
-            )
-         })
-      }
+      <CharacterControl onSearch={onSearch} onClear={onClear}/>
+      <div className={cardsStyles.cards}> 
+         {
+            characters.map((character,index) =>
+              <Card
+               key={index}
+               id ={character.id}
+               name={character.name}
+               status={character.status}
+               species={character.species}
+               gender={character.gender}
+               image={character.image}
+               origin={character.origin.name}
+               onClose={() => onClose(character.id)}/>
+             )
+         }
+      </div>
    </div>
    );
 }
