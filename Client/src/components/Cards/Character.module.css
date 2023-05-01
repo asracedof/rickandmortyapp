@@ -1,0 +1,44 @@
+.cardsControl{
+    margin: 1px auto 1px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonC{
+  background-color: var(--ligth-blue);
+  padding: 5px 10px;
+  margin: 0px 3px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--purple-dark);
+  border-radius: 10px;
+  border-color: transparent;
+}
+.buttonC:hover {
+    background-color: var(--green);
+    transform: scale(1.05);
+  }
+  
+  .cardsControl input + .buttonC {
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .cardsControl input {
+    color: var(  --purple-dark);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 16px;
+    margin: 0 -30px 0 30px;
+    border-radius: 10px 0 0 10px;
+    max-width: 165px;
+    outline: none;
+    border-color: transparent;
+  }
+  
+  .cardsControl input:focus {
+    outline: none;
+    border-color: var(--green);
+  }

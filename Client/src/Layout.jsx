@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation, Outlet, } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse, faAddressCard, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import axios from "axios";
 import logo from "./assets/img/logo1.png"
 import "./index.css"
@@ -62,16 +65,16 @@ function Layout(props) {
                     <nav className={styles.nav}>
                         <ul>
                             <li>
-                                <NavLink to="/home" className={({isActive}) => checkActive(isActive)} end>Home</NavLink>
+                                <NavLink to="/home" className={({isActive}) => checkActive(isActive)} end><FontAwesomeIcon icon={faHouse}/></NavLink>
                             </li>
                             <li>
-                                <NavLink to="/home/favorites" className={({isActive}) => checkActive(isActive)} >Favorites</NavLink>
+                                <NavLink to="/home/favorites" className={({isActive}) => checkActive(isActive)} ><FontAwesomeIcon icon={faHeartRegular} /> </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/home/about" className={({isActive}) => checkActive(isActive)} >About</NavLink>
+                                <NavLink to="/home/about" className={({isActive}) => checkActive(isActive)} > <FontAwesomeIcon icon={faAddressCard}/></NavLink>
                             </li>
                             <li onClick={props.logout}>
-                                <NavLink to="/" className={({isActive}) => checkActive(isActive) } >Logout</NavLink>
+                                <NavLink to="/" className={({isActive}) => checkActive(isActive) } ><FontAwesomeIcon icon={faArrowRightFromBracket} /></NavLink>
                             </li>
                         </ul>
                     </nav>

@@ -1,4 +1,6 @@
 import React, {useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
 import styles from "./Character.module.css";
 
 let randomId
@@ -24,9 +26,9 @@ export default function CharacterControl (props){
      return (
         <div className={styles.cardsControl}>
            <input type='search' name='search' id='search' placeholder="Required ID" onChange={handleInputChange}/>
-           <button className={styles.buttonCyan} onClick={() => props.onSearch(characterId)} >Add</button>
-           <button className={styles.buttonCyan} onClick={() => sendRandomId()} >Create random</button>
-           <button className={styles.buttonCyan} onClick={() => props.onClear() }>Clear</button>
+           <button className={styles.buttonC} onClick={() => props.onSearch(characterId)} >Add</button>
+           <button className={styles.buttonC} onClick={() => sendRandomId()} >Create random</button>
+           <button className={styles.buttonC} onClick={() => props.onClear() }>Clear</button>
         </div>
      );
 }
