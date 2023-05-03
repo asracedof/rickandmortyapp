@@ -1,71 +1,75 @@
 .detail-container{
-  width: 100%;
-  min-height: 70vh;
-  margin: 0 auto;
-  margin-top: 40px;
+  min-height: 500px;
+  max-width: 750px;
+  min-width: 350px;
+  margin: 40px;
+  padding-top: 10px;
+  border-radius: 30px;
+  background: rgb(46, 22, 65);
+  background: linear-gradient(
+    0deg,
+    var(--purple-dark) 0%,
+    var(--purple-light) 90%
+  );
+  border: 10px solid var(--purple-dark);
+  box-shadow: 0 0 12px 3px var(--purple-dark);
+  transition: 50ms;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
- 
+  
+}
+.detail-container:hover {
+  transform: scale(1.009);
+  box-shadow: 0 0 15px 5px var(--purple-dark);
 }
 
-
 .card-container {
-  background-color:#5085c7;
-   border-radius: 10px;
-   display: flex;
-   box-sizing: border-box;
-   justify-content: center;
-  align-items: center;
-  width: 70%;
-  max-width: 350px;
-  min-width: 200px;
-  height: 250px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .detailImage {
-  position: relative;
-  left: -20px;
-  top: 9px;
-  box-shadow: 2px 3px 10px rgba(50,50,50,0.9);
-  width: 300px;
-  min-width: 150px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 16px;
+  display: flex;
+  width: 450px;
+  max-width: 320px;
+  border: 4px solid var(--violet-dark);
+  margin: 5px;
+  transition: 150ms;
 }
 
 .infoContainer {
+  max-width: 400px;
+  margin: 10px;
   display: flex;
-  position: relative;
-  gap: 1rem;
   flex-direction: column;
-  align-items:  center;
-  width: 90%;  
+  align-items: flex-start;
 }
 
 .card-name {
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 18px;
-  background-color: #FFD700;
-  padding: 0.2rem 0.5rem;
+  width: 50%;
+  position: relative;
+  top: 310px;
+  left:-77px;
+  text-align:left;
+  font-size: 15px;
+  background-color:var(--green);
+  padding: 0.2rem 0.3rem;
   border: 1px solid black;
   }
 
 .card-info-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2px;
- 
-}
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: var(--ligth-blue);
+ }
 
 
 .card-info {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 5px;
   display: flex;
   flex-direction: row;

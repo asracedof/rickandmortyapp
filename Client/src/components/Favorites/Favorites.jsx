@@ -39,7 +39,7 @@ const Favorites = ({ myFavorites, removeFav, onClose}) => {
 
   <div className="containerFavs">
     <div className="rowFilter">
-    <select onChange={handleOrder} name="order" value={orderSelect}>
+    <select className="filters" onChange={handleOrder} name="order" value={orderSelect}>
     <option value="DEFAULT" disabled>
             Select Order
           </option>
@@ -47,15 +47,16 @@ const Favorites = ({ myFavorites, removeFav, onClose}) => {
         <option value="DESC">Descending</option>
     </select>
 
-    <select  onChange={handleFilter} name="filter" value={filterSelect}>
-        <option value="DEFAULT" disabled>Select Filter</option>
-        <option value="AllCharacters">AllCharacters</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Genderless">Genderless</option>
-        <option value="unknown">Unknown</option> 
+    <select className="filters" onChange={handleFilter} name="filter" value={filterSelect}>
+    <option value="DEFAULT" disabled>Select Filter</option>
+    <option value="AllCharacters">AllCharacters</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Genderless">Genderless</option>
+    <option value="unknown">Unknown</option> 
     </select>
-    <button className="reset" onClick={handleResetFilters}>Reset Filters</button>
+
+    <button className="reset" onClick={handleResetFilters}>Reset</button>
         </div>
         <div className="favs" >
             {

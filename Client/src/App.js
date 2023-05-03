@@ -9,8 +9,8 @@ import Form from './Pages/Form/Login';
 import Error from './Pages/Error/Error';
 import Favorites from './components/Favorites/Favorites';
 import './index.css';
-
 const URL = 'http://localhost:3001/rickandmorty/login/';
+
 function App() {
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
@@ -46,7 +46,7 @@ function App() {
       <Route path='/home' element={<Layout logout={logout}/>}>
       <Route index element={<Cards/>}/>
       <Route path='about' element={<About />} />
-      <Route path='detail/:id' element={<Detail />} />
+      <Route path='detail/:id' element={<Detail/>} />
       <Route path='favorites' element={<Favorites/>} />
       <Route path='*' element={<Error />} />
     </Route>

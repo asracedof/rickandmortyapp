@@ -49,7 +49,7 @@ function Card({ id, name, gender, status, image, species, onClose, addFav, remov
         </button>
 
       </div>
-      <Link to={`/detail/${id}`}>
+      <Link to={`detail/${id}`}>
         <div>
           <img src={image} alt={image} />
          </div>

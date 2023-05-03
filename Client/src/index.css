@@ -1,9 +1,11 @@
 :root {
-   --purple-light: #A869C1;
+  --purple-light: #A869C1;
   --purple-medium: #7A3F93;
   --purple-dark: #47215E;
+  --purple:rgba(103, 43, 143, 0.4);
   --pink: #c93f78;
   --green: #abdb19;
+  --green-medium:#16c216;
   --dark-green: #0b7508;
   --blue: #00C9FF;
   --ligth-blue: rgb(202, 228, 240);

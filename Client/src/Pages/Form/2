@@ -1,0 +1,155 @@
+.formMain {
+  text-align: center;
+  font-family: "Signika Negative", sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgb(103, 43, 143);
+  background: linear-gradient(
+    180deg,
+    rgba(103, 43, 143, 1) 24%,
+    rgba(253, 29, 29, 1) 80%,
+    rgba(255, 158, 23, 1) 100%
+  );
+  background-image: url("../imgs/bgAnim.gif");
+  background-color: rgba(103, 43, 143, 0.4);
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.formContainer {
+  padding: 7vh 9vh 5vh 9vh;
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(66, 24, 95, 0.85);
+  border-radius: 15px;
+}
+
+.formContainer h1 {
+  font-family: "Londrina Solid", cursive;
+  font-size: 53px;
+  font-weight: 400;
+  color: var(--green);
+  margin: 15px auto 10px auto;
+  text-shadow: 4px 3px 0px var(--violet-medium), 6px 4px 0px var(--pink);
+  transition: 400ms;
+}
+.formContainer h1:hover {
+  color: var(--cyan);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form input {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 7px 10px;
+  margin: 15px;
+  max-width: 200px;
+  outline: none;
+}
+.form input:focus {
+  border-bottom: 3px solid var(--green);
+  /* background-color: rgba(255, 255, 255, 0.95); */
+  background-color: var(--violet-light);
+}
+
+.formMain h3 {
+  color: var(--pink);
+  margin: 7vw auto 3vh auto;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.form button {
+  background-color: var(--green);
+  padding: 7px 40px;
+  margin: 40px auto;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--violet-medium);
+  border-radius: 7px;
+  border-color: transparent;
+  transition: 500ms;
+}
+
+.form button:hover {
+  background-color: var(--cyan);
+  transform: scale(1.1);
+  box-shadow: 4px 4px 0px var(--violet-light), 7px 7px 0px var(--pink);
+}
+
+.hidden {
+  display: none;
+}
+
+.link:link,
+.link:visited {
+  color: var(--green);
+}
+.link:hover,
+.link:active {
+  color: var(--cyan);
+}
+
+.warning {
+  border: solid white 1px;
+  border-radius: 0.2em;
+}
+
+.danger {
+  font-size: 12px;
+  color: var(--cyan);
+}
+
+.collapsible {
+  padding: 10px;
+  height: 80px;
+}
+
+.toggle {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  transition: 600ms;
+}
+.toggle:hover {
+  color: var(--cyan);
+  transform: scale(1.07);
+}
+
+.guestInfo {
+  color: white;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 15px;
+}
+
+.guestInfo p {
+  margin: 5px;
+}

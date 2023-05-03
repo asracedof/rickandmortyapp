@@ -1,107 +1,152 @@
 @font-face {
-   font-family: 'Bungee Spice';
-   src: url('../src/assets/Font/Bungee/bungeespice-regular-webfont.woff2') format('woff2'),
-        url('../src/assets/Font/Bungee/bungeespice-regular-webfont.woff') format('woff');
-   font-weight: normal;
-   font-style: normal;
+  font-family: 'Bungee Spice';
+  src: url('../src/assets/Font/Bungee/bungeespice-regular-webfont.woff2') format('woff2'),
+       url('../src/assets/Font/Bungee/bungeespice-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .main {
-   height: 100%;
-   min-height: 100vh;
-   background: url("./assets/img/rick-y-morty-en-el-espacio-9232.webp") no-repeat fixed center/cover;
-   background-attachment: fixed;
-   display: flex;
-   justify-content:space-evenly;
- }
- 
- .container {
-   display: flex;
-   flex-direction: column;
-   width:100%;
-   max-width: 1270px;
-   background-color: rgba(10, 1, 17, 0.6);
-   backdrop-filter: blur(5px);
-   
- }
- 
- .header {
-   display: fixed;
-   flex-direction: column;
-   justify-content: center;
-   align-items:flex-start;
-   width: 100%;
-   padding: 30px;
-   background: var(--purple-medium);
-   background: linear-gradient(
-     180deg,
-     var(--purple-medium) 20%,
-     var(--pink) 90%
-   );
-   -webkit-box-shadow: 3px 10px 14px -5px rgba(46, 22, 65, 0.54);
-   -moz-box-shadow: 3px 10px 14px -5px rgba(46, 22, 65, 0.54);
-   box-shadow: 3px 10px 14px -5px rgba(46, 22, 65, 0.54);
- }
- 
- .nav {
-   display: flex;
-   justify-content: flex-end;
- }
- 
- .nav ul {
-   display: flex;
-   justify-content: flex-end;
- }
- 
- .nav li {
-   list-style: none;
- }
- 
- .navLink {
-   padding: 10px;
-   margin: 7px;
-   font-family:'Courier New', Courier, monospace;
-   font-size: 20px;
-   font-weight: 600;
-   text-decoration: none;
- }
- .navLink:hover {
-   color: var(--green);
- }
- 
- .active {
-   color: var(--green);
- }
- 
- .inactive {
-   color: var(--ligth-blue);
- }
- 
- .hero {
-   display: flex;
-   align-items: center;
+  height: 100%;
+  min-height: 100vh;
+  background: url("./assets/img/rick-y-morty-en-el-espacio-9232.webp") no-repeat fixed center/cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  max-width: 1270px;
+  background-color: rgba(10, 1, 17, 0.6);
+  backdrop-filter: blur(5px);
   
- }
+}
+
+.header {
+  display: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  width: 100%;
+  padding: 22px;
+  background: var(--purple-medium);
+  background: linear-gradient(
+    180deg,
+    var(--purple-medium) 20%,
+    var(--pink) 90%
+  );
+  -webkit-box-shadow: 3px 10px 14px -5px rgba(46, 22, 65, 0.54);
+  -moz-box-shadow: 3px 10px 14px -5px rgba(46, 22, 65, 0.54);
+  box-shadow: 3px 10px 14px -5px rgba(46, 22, 65, 0.54);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.navLink {
+  padding: 10px;
+  margin: 7px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navLink:hover {
+  color: var(--green);
+}
+
+.active {
+  color: var(--green);
+}
+
+.inactive {
+  color: var(--ligth-blue);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
  
- .logo img {
-   max-width: 280px;
-   margin: -5vw auto -3vw auto;
-   transition: 900ms;
- }
- .logo img:hover {
-   transform: scale(1.1);
- }
- .title{
-   font-family: 'Bungee Spice';
- }
- .title {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   max-width: 700px;
-   margin: 10px auto;
- }
+}
+
+.logo img {
+  max-width: 280px;
+  margin: -5vw auto -3vw auto;
+  transition: 900ms;
+}
+.logo img:hover {
+  transform: scale(1.1);
+}
+.title{
+  font-family: 'Bungee Spice';
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.title h1 {
+  font-size: 70px;
+  color:var(--dark-green);
+  margin: 10px auto;
+  text-shadow: -1px -1px 0 #0a0a0a, 1px -1px 0 #080808, -1px 1px 0 #070707, 1px 1px 0 #050505, 0 0 20px #066837;
+}
+
+.title p {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.visible {
+  display: flex;
+}
+
+.invisible {
+  display: none;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
  
+
+ 
+ 
+ 
+ 
+ 
+
+
  .title h1 {
    font-size: 70px;
    color:var(--dark-green);

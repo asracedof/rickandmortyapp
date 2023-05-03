@@ -1,6 +1,6 @@
 .cardsControl{
-    margin: 1px auto 1px auto;
     display: flex;
+    position:absolute;
     justify-content: center;
     align-items: center;
 }
@@ -28,10 +28,11 @@
   .cardsControl input {
     color: var(  --purple-dark);
     font-family:'Courier New', Courier, monospace;
+    text-align: center;
     font-size: 16px;
-    font-weight: 500;
-    padding: 6px 16px;
-    margin: 0 -30px 0 30px;
+    font-weight: bold;
+    padding: 6px 20px;
+    margin: 0 -24px 0 30px;
     border-radius: 10px 0 0 10px;
     max-width: 165px;
     outline: none;

@@ -24,6 +24,7 @@ function Layout(props) {
             setTitle("Hall of Fame");
             setSubtitle("A Collection of Your Favorite Characters");
             break;
+
         default:
             setTitle("Explore the Multiverse");
             setSubtitle("Discover and Collect Your Favorite Characters");

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import loginStyle from "./Login.module.css";
+import styles from "./Login.module.css";
 
 const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 const regexPassword = /^(?=.*\d)[\w@-]{6,10}$/;
@@ -10,7 +10,7 @@ export default function Login({login}) {
     email:"",
     password:""
   });
-
+  const [isOpen, setIsOpen] =useState(false);
   const [errors, setErrors]= useState({});
    
    function valido(inputs){
@@ -53,27 +53,41 @@ export default function Login({login}) {
      }
   }
     
-    return (
-    <div className={loginStyle.container}>
-    <h1 className={loginStyle.title}>Sign in to the Multiverse</h1>
+  return (
+    <main className={styles.container}>
+     <div className={styles.formContainer}>
+        <h1 className={styles.title}>Sign to the<br />Multiverse</h1>
       
-      <form onSubmit={handleSubmit}>
-        <div>
-        <label className={loginStyle.email}></label>
-      <input className={loginStyle.inputEmail} name="email" value={inputs.email} onChange={handleChange} placeholder="Enter your email address"></input>
+      <form className={styles.form}action="" onSubmit={handleSubmit}>
+
+        <div className={styles.info}>
+         <label htmlFor="email" className={styles.label}>Username:</label>
+         <input name="email" type='text' value={inputs.email} onChange={handleChange} placeholder="Enter your email address" className={errors.email && styles.warning}></input>
+         {errors.email && <p className={styles.invalid}>{errors.email}</p>}
         </div>
-   
+
+        <div >
+         <label htmlFor="password" className={styles.label}>Password:</label>
+         <input name="password" type="password"  value={inputs.password}  onChange={handleChange}placeholder="Enter your password" className={errors.password && styles.warning} ></input>  
+         {errors.password && <p className={styles.invalid}>{errors.password}</p>}
+        </div>    
       
-      {errors.email && <p className="invalid">{errors.email}</p>}
-      
-      <label className={loginStyle.label}></label>
-      <input className={loginStyle.input} type="password" value={inputs.password} name="password" onChange={handleChange}placeholder="Enter your password"></input>
-      
-      {errors.password && <p className="invalid">{errors.password}</p>}
-      
-      <button type="submit" className={loginStyle.button}>SUBMIT</button>
+       <button type="submit" className={styles.button}>Login</button>
       </form>
-      <h3 className={loginStyle.made}>  Made by <a href="https://www.linkedin.com/in/arlet-racedo-fernandez-38b076267/" target="_blank" rel="noreferrer" className={loginStyle.link} > Arlet Racedo Fernandez</a></h3>
-    </div>
+      <div className={styles.collapsible}>
+                  <button className={styles.toggle} onClick={() => setIsOpen(!isOpen) } >GUEST USER CREDENTIALS</button>
+                  { isOpen && 
+                    <div className={styles.guestInfo}>
+                      <p><span>Email: </span>ejemplo@gmail.com</p>
+                      <p><span>Password: </span>Unapass1</p>
+                    </div>
+                  }
+        </div>
+
+      </div>
+      <h3 className={styles.made}>  Made by  <a href="https://www.linkedin.com/in/arlet-racedo-fernandez-38b076267/" target="_blank" rel="noreferrer" className={styles.link} > Arlet Racedo Fernandez</a></h3>
+  </main>
+  
   )
 }
+
